@@ -155,6 +155,5 @@ public class MyArrayList<T> {
         catch (UnsupportedOperationException e){
             System.out.println("Array has element which is not integer");
         }
-
     }
 }
