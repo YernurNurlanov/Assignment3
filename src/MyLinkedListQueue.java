@@ -10,4 +10,7 @@ public class MyLinkedListQueue<T> {
     public T dequeue(){
         return queue.remove(0);
     }
+    public T peek(){
+        return queue.get(0);
+    }
 }
