@@ -128,7 +128,8 @@ public class MyLinkedList<E>{
         return false;
     }
     // Removes an element from the linked list at a specified index, throwing an exception if the index is out of bounds
-    public void remove(int index) {
+    public E remove(int index) {
+        E node = get(index);
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
@@ -164,6 +165,7 @@ public class MyLinkedList<E>{
             current.next.previous = current.previous;
         }
         size--;
+        return node;
     }
     //clear() - clears linked list
     public void clear() {

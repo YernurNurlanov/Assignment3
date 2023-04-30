@@ -10,4 +10,10 @@ public class MyLinkedListStack<T> {
     public boolean isEmpty() {
         return stack.size() == 0;
     }
+    public T pop(){
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
+        return stack.remove(0);
+    }
 }
