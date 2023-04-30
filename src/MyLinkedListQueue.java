@@ -1,2 +1,3 @@
-public class MyLinkedListQueue {
+public class MyLinkedListQueue<T> {
+    MyLinkedList<T> queue;
 }
