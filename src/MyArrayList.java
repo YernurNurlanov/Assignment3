@@ -80,10 +80,15 @@ public class MyArrayList<T> {
     }
     // Adds an element at the specified index, throwing an exception if the index is out of bounds
     public void add(Object item, int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException();
+        if (index < 0 || index > size) throw new IndexOutOfBoundsException();
+        if(size == arr.length) {
+            buffered();
+        }
+        for(int i = size; i>index; i--) {
+            arr[i] = arr[i-1];
         }
         arr[index] = (T) item;
+        size++;
     }
     // Checks if an element has been deleted
     public boolean remove(Object item) {
