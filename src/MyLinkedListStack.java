@@ -22,4 +22,7 @@ public class MyLinkedListStack<T> {
         }
         return stack.get(0);
     }
+    public int size(){
+        return stack.size();
+    }
 }
