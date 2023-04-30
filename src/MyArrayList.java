@@ -100,7 +100,8 @@ public class MyArrayList<T> {
         return true;
     }
     // Removes the element at the specified index, throwing an exception if the index is out of bounds
-    public void remove(int index) {
+    public T remove(int index) {
+        T e = get(index);
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
@@ -109,6 +110,7 @@ public class MyArrayList<T> {
             arr[i - 1] = arr[i];
         }
         size--;
+        return e;
     }
     // Clears the array by creating a new array with a capacity of 5 elements and setting the size to 0
     public void clear() {
